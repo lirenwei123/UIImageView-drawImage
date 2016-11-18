@@ -9,10 +9,16 @@
 /* Begin PBXBuildFile section */
 		FB450EBD1DDF8AEF00EB23D2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FB450EBC1DDF8AEF00EB23D2 /* main.m */; };
 		FB450EC01DDF8AEF00EB23D2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FB450EBF1DDF8AEF00EB23D2 /* AppDelegate.m */; };
-		FB450EC31DDF8AEF00EB23D2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB450EC21DDF8AEF00EB23D2 /* ViewController.m */; };
 		FB450EC61DDF8AEF00EB23D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB450EC41DDF8AEF00EB23D2 /* Main.storyboard */; };
 		FB450EC81DDF8AEF00EB23D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB450EC71DDF8AEF00EB23D2 /* Assets.xcassets */; };
 		FB450ECB1DDF8AEF00EB23D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB450EC91DDF8AEF00EB23D2 /* LaunchScreen.storyboard */; };
+		FB450ED41DDF8DD100EB23D2 /* LRWview1.m in Sources */ = {isa = PBXBuildFile; fileRef = FB450ED31DDF8DD100EB23D2 /* LRWview1.m */; };
+		FB450ED71DDF8DDA00EB23D2 /* LRWview2.m in Sources */ = {isa = PBXBuildFile; fileRef = FB450ED61DDF8DDA00EB23D2 /* LRWview2.m */; };
+		FB450EDA1DDF8DE400EB23D2 /* LRWview3.m in Sources */ = {isa = PBXBuildFile; fileRef = FB450ED91DDF8DE400EB23D2 /* LRWview3.m */; };
+		FB450EDD1DDF8DEA00EB23D2 /* LRWview4.m in Sources */ = {isa = PBXBuildFile; fileRef = FB450EDC1DDF8DEA00EB23D2 /* LRWview4.m */; };
+		FB450EE01DDF8DF100EB23D2 /* LRWview5.m in Sources */ = {isa = PBXBuildFile; fileRef = FB450EDF1DDF8DF100EB23D2 /* LRWview5.m */; };
+		FB450EE31DDF8DF900EB23D2 /* LRWview6.m in Sources */ = {isa = PBXBuildFile; fileRef = FB450EE21DDF8DF900EB23D2 /* LRWview6.m */; };
+		FB450EE61DDFA5A400EB23D2 /* UIImageView+drawImage.m in Sources */ = {isa = PBXBuildFile; fileRef = FB450EE51DDFA5A400EB23D2 /* UIImageView+drawImage.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,12 +26,25 @@
 		FB450EBC1DDF8AEF00EB23D2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FB450EBE1DDF8AEF00EB23D2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FB450EBF1DDF8AEF00EB23D2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		FB450EC11DDF8AEF00EB23D2 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		FB450EC21DDF8AEF00EB23D2 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		FB450EC51DDF8AEF00EB23D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FB450EC71DDF8AEF00EB23D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FB450ECA1DDF8AEF00EB23D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FB450ECC1DDF8AEF00EB23D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB450ED21DDF8DD100EB23D2 /* LRWview1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRWview1.h; sourceTree = "<group>"; };
+		FB450ED31DDF8DD100EB23D2 /* LRWview1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRWview1.m; sourceTree = "<group>"; };
+		FB450ED51DDF8DDA00EB23D2 /* LRWview2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRWview2.h; sourceTree = "<group>"; };
+		FB450ED61DDF8DDA00EB23D2 /* LRWview2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRWview2.m; sourceTree = "<group>"; };
+		FB450ED81DDF8DE400EB23D2 /* LRWview3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRWview3.h; sourceTree = "<group>"; };
+		FB450ED91DDF8DE400EB23D2 /* LRWview3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRWview3.m; sourceTree = "<group>"; };
+		FB450EDB1DDF8DEA00EB23D2 /* LRWview4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRWview4.h; sourceTree = "<group>"; };
+		FB450EDC1DDF8DEA00EB23D2 /* LRWview4.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRWview4.m; sourceTree = "<group>"; };
+		FB450EDE1DDF8DF100EB23D2 /* LRWview5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRWview5.h; sourceTree = "<group>"; };
+		FB450EDF1DDF8DF100EB23D2 /* LRWview5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRWview5.m; sourceTree = "<group>"; };
+		FB450EE11DDF8DF900EB23D2 /* LRWview6.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRWview6.h; sourceTree = "<group>"; };
+		FB450EE21DDF8DF900EB23D2 /* LRWview6.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRWview6.m; sourceTree = "<group>"; };
+		FB450EE41DDFA5A400EB23D2 /* UIImageView+drawImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+drawImage.h"; sourceTree = "<group>"; };
+		FB450EE51DDFA5A400EB23D2 /* UIImageView+drawImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+drawImage.m"; sourceTree = "<group>"; };
+		FB450EE71DDFABDF00EB23D2 /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,8 +79,21 @@
 			children = (
 				FB450EBE1DDF8AEF00EB23D2 /* AppDelegate.h */,
 				FB450EBF1DDF8AEF00EB23D2 /* AppDelegate.m */,
-				FB450EC11DDF8AEF00EB23D2 /* ViewController.h */,
-				FB450EC21DDF8AEF00EB23D2 /* ViewController.m */,
+				FB450ED21DDF8DD100EB23D2 /* LRWview1.h */,
+				FB450ED31DDF8DD100EB23D2 /* LRWview1.m */,
+				FB450ED51DDF8DDA00EB23D2 /* LRWview2.h */,
+				FB450ED61DDF8DDA00EB23D2 /* LRWview2.m */,
+				FB450ED81DDF8DE400EB23D2 /* LRWview3.h */,
+				FB450ED91DDF8DE400EB23D2 /* LRWview3.m */,
+				FB450EDB1DDF8DEA00EB23D2 /* LRWview4.h */,
+				FB450EDC1DDF8DEA00EB23D2 /* LRWview4.m */,
+				FB450EDE1DDF8DF100EB23D2 /* LRWview5.h */,
+				FB450EDF1DDF8DF100EB23D2 /* LRWview5.m */,
+				FB450EE11DDF8DF900EB23D2 /* LRWview6.h */,
+				FB450EE21DDF8DF900EB23D2 /* LRWview6.m */,
+				FB450EE41DDFA5A400EB23D2 /* UIImageView+drawImage.h */,
+				FB450EE51DDFA5A400EB23D2 /* UIImageView+drawImage.m */,
+				FB450EE71DDFABDF00EB23D2 /* Header.h */,
 				FB450EC41DDF8AEF00EB23D2 /* Main.storyboard */,
 				FB450EC71DDF8AEF00EB23D2 /* Assets.xcassets */,
 				FB450EC91DDF8AEF00EB23D2 /* LaunchScreen.storyboard */,
@@ -105,6 +137,7 @@
 		FB450EB01DDF8AEF00EB23D2 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = LRW;
 				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = companyName;
 				TargetAttributes = {
@@ -151,9 +184,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FB450EC31DDF8AEF00EB23D2 /* ViewController.m in Sources */,
+				FB450ED71DDF8DDA00EB23D2 /* LRWview2.m in Sources */,
+				FB450EE01DDF8DF100EB23D2 /* LRWview5.m in Sources */,
+				FB450EE61DDFA5A400EB23D2 /* UIImageView+drawImage.m in Sources */,
+				FB450EDA1DDF8DE400EB23D2 /* LRWview3.m in Sources */,
 				FB450EC01DDF8AEF00EB23D2 /* AppDelegate.m in Sources */,
+				FB450EE31DDF8DF900EB23D2 /* LRWview6.m in Sources */,
+				FB450ED41DDF8DD100EB23D2 /* LRWview1.m in Sources */,
 				FB450EBD1DDF8AEF00EB23D2 /* main.m in Sources */,
+				FB450EDD1DDF8DEA00EB23D2 /* LRWview4.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

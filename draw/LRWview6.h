@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  LRWview6.h
 //  draw
 //
 //  Created by rwli on 16/11/19.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface LRWview6 : UIView
 
 @end
-
