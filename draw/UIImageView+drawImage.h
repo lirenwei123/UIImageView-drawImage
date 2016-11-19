@@ -26,6 +26,8 @@
 
 //带水印的原始矩形图片
 +(UIImage*)imageWithimg:(UIImage*)img watermark:(NSString*)watermark attributeDic:(NSDictionary*)attributeDic watermarkdrawAtPoint:(CGPoint)point;
+//保存img到文件，
++(void)image:(UIImage*)img savetofile:(NSString*)filepath imageformat:(NSString*)JPEG_PNG;
 //截取一个view的图片，JPEG_PNG：JPEG/PNG格式
 +(void)imageWithview:(UIView*)view  savepath:(NSString*)path imageformat:(NSString*)JPEG_PNG;
 //截取一个view
@@ -34,6 +36,7 @@
 +(void)image_cutwithrect:(CGRect)rect fromimgv:(UIImageView*)imgv;
 //从view中裁剪出rect大小的img，返回img；
 +(UIImage*)image_cutwithrect:(CGRect)rect fromview:(UIView*)view;
-
+//从view中裁剪出圆/椭圆的img，返回img；
++(UIImage*)image_cutwithOval_rect:(CGRect)rect fromview:(UIView*)view;
 
    @end

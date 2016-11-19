@@ -72,15 +72,20 @@
     UIGraphicsEndImageContext();
     return myimg;
 }
-+(void)imageWithview:(UIView*)view  savepath:(NSString*)path imageformat:(NSString*)JPEG_PNG{
-    UIImage *img =[UIImageView imageWithview:view];
++(void)image:(UIImage*)img savetofile:(NSString*)filepath imageformat:(NSString*)JPEG_PNG{
     NSData *data;
     if ([JPEG_PNG isEqualToString:@"JPEG"])  {
         data =UIImageJPEGRepresentation(img, 1);
     }else{
         data =UIImagePNGRepresentation(img);
     }
-    [data writeToFile:path atomically:YES];
+    [data writeToFile:filepath atomically:YES];
+    
+}
+
++(void)imageWithview:(UIView*)view  savepath:(NSString*)path imageformat:(NSString*)JPEG_PNG{
+    UIImage *img =[UIImageView imageWithview:view];
+    [UIImageView image:img savetofile:path imageformat:JPEG_PNG];
 }
 
 +(UIImage*)imageWithview:(UIView*)view  {
@@ -98,6 +103,17 @@
 +(UIImage*)image_cutwithrect:(CGRect)rect fromview:(UIView*)view{
     UIGraphicsBeginImageContextWithOptions(view.frame.size, NO, 0);
     UIBezierPath *path =[UIBezierPath bezierPathWithRect:rect];
+    [path addClip];
+    //裁剪之后再去渲染
+    CGContextRef ctx =UIGraphicsGetCurrentContext();
+    [view.layer renderInContext:ctx];
+    UIImage *image =UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return image;
+}
++(UIImage*)image_cutwithOval_rect:(CGRect)rect fromview:(UIView*)view{
+    UIGraphicsBeginImageContextWithOptions(view.frame.size, NO, 0);
+    UIBezierPath *path =[UIBezierPath bezierPathWithOvalInRect:rect];
     [path addClip];
     //裁剪之后再去渲染
     CGContextRef ctx =UIGraphicsGetCurrentContext();
