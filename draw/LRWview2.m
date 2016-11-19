@@ -13,7 +13,9 @@
 
 -(void)drawRect:(CGRect)rect{
     //圆的
-    self.imgv1.image =[UIImageView roundImageWithimgname:@"12.jpg" borderWidth:20 borferColor:[UIColor greenColor]];
+    UIImage *img1 =[UIImage imageNamed:@"5.jpg"];
+    
+    self.imgv1.image =[UIImageView ovalImageWithimg:img1 borderWidth:50 borferColor:[UIColor redColor] rectWfactor:0.8 rectHfactor:1];
 
 }
 @end

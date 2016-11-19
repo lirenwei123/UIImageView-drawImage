@@ -8,39 +8,40 @@
 
 #import "UIImageView+drawImage.h"
 
+
 @implementation UIImageView (drawImage)
-+(UIImage*)roundImageWithimgname:(NSString*)imgname {
-    UIImage *img =[[UIImage imageNamed:imgname]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+
+
++(UIImage*)imageWithimg:(UIImage*)img  personalThing_path:(UIBezierPath*)BezierPath {
     UIGraphicsBeginImageContextWithOptions(img.size, NO, 0);
+    [BezierPath addClip];
+    [img drawAtPoint:CGPointZero];
+    UIImage *myimg =UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return myimg;
+    
+}
+
+
+//___以上为内部共用代码____________________________________________________//
+
++(UIImage*)roundImageWithimg:(UIImage*)img {
     UIBezierPath *path =[UIBezierPath  bezierPathWithOvalInRect:CGRectMake(0, 0, img.size.width, img.size.height)];
-    [path addClip];
-    
-    [img drawAtPoint:CGPointZero];
-    UIImage *myimg =UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    return myimg;
+    return [UIImageView imageWithimg:img personalThing_path:path];
 }
 
-+(UIImage*)ovalImageWithimgname:(NSString*)imgname rectWfactor:(CGFloat)fctor_w rectHfactor:(CGFloat)fctor_h {
-    UIImage *img =[[UIImage imageNamed:imgname]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    UIGraphicsBeginImageContextWithOptions(img.size, NO, 0);
++(UIImage*)ovalImageWithimg:(UIImage*)img rectWfactor:(CGFloat)fctor_w rectHfactor:(CGFloat)fctor_h {
     UIBezierPath *path =[UIBezierPath  bezierPathWithOvalInRect:CGRectMake(0, 0, img.size.width*fctor_w, img.size.height*fctor_h)];
-    [path addClip];
-    
-    [img drawAtPoint:CGPointZero];
-    UIImage *myimg =UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    return myimg;
+    return [UIImageView imageWithimg:img personalThing_path:path];
 }
 
-+(UIImage*)roundImageWithimgname:(NSString*)imgname borderWidth:(CGFloat)borderWidth borferColor:(UIColor*)color{
-    UIImage *img =[[UIImage imageNamed:imgname]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
++(UIImage*)roundImageWithimg:(UIImage*)img borderWidth:(CGFloat)borderWidth borferColor:(UIColor*)color{
     CGSize size =CGSizeMake(img.size.width+2*borderWidth, img.size.height+2*borderWidth);
     UIGraphicsBeginImageContextWithOptions(size, NO, 0);
     UIBezierPath *path =[UIBezierPath  bezierPathWithOvalInRect:CGRectMake(0, 0, size.width,size.height)];
     [color set];
     [path fill];
-   path =[UIBezierPath bezierPathWithOvalInRect:CGRectMake(borderWidth, borderWidth, img.size.width, img.size.height)];
+    path =[UIBezierPath bezierPathWithOvalInRect:CGRectMake(borderWidth, borderWidth, img.size.width, img.size.height)];
     [path addClip];
     
     [img drawAtPoint:CGPointMake(borderWidth, borderWidth)];
@@ -48,9 +49,8 @@
     UIGraphicsEndImageContext();
     return myimg;
 }
-+(UIImage*)ovalImageWithimgname:(NSString*)imgname borderWidth:(CGFloat)borderWidth borferColor:(UIColor*)color rectWfactor:(CGFloat)fctor_w rectHfactor:(CGFloat)fctor_h{
-    UIImage *img =[[UIImage imageNamed:imgname]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    CGSize size =CGSizeMake(img.size.width*fctor_w+2*borderWidth, img.size.height*fctor_h+2*borderWidth);
++(UIImage*)ovalImageWithimg:(UIImage*)img borderWidth:(CGFloat)borderWidth borferColor:(UIColor*)color rectWfactor:(CGFloat)fctor_w rectHfactor:(CGFloat)fctor_h{
+        CGSize size =CGSizeMake(img.size.width*fctor_w+2*borderWidth, img.size.height*fctor_h+2*borderWidth);
     UIGraphicsBeginImageContextWithOptions(size, NO, 0);
     UIBezierPath *path =[UIBezierPath  bezierPathWithOvalInRect:CGRectMake(0, 0, size.width,size.height)];
     [color set];
@@ -64,13 +64,74 @@
     return myimg;
 }
 
-+(UIImage*)imageWithimgname:(NSString*)imgname watermark:(NSString*)watermark attributeDic:(NSDictionary*)attributeDic{
-UIImage *img =[[UIImage imageNamed:imgname]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-UIGraphicsBeginImageContextWithOptions(img.size, NO, 0);
-[img drawAtPoint:CGPointZero];
-[watermark drawAtPoint:CGPointZero withAttributes:attributeDic];
-UIImage *myimg =UIGraphicsGetImageFromCurrentImageContext();
-UIGraphicsEndImageContext();
++(UIImage*)imageWithimg:(UIImage*)img watermark:(NSString*)watermark attributeDic:(NSDictionary*)attributeDic watermarkdrawAtPoint:(CGPoint)point{
+    UIGraphicsBeginImageContextWithOptions(img.size, NO, 0);
+    [img drawAtPoint:CGPointZero];
+    [watermark drawAtPoint:point withAttributes:attributeDic];
+    UIImage *myimg =UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
     return myimg;
 }
++(void)imageWithview:(UIView*)view  savepath:(NSString*)path imageformat:(NSString*)JPEG_PNG{
+    UIImage *img =[UIImageView imageWithview:view];
+    NSData *data;
+    if ([JPEG_PNG isEqualToString:@"JPEG"])  {
+        data =UIImageJPEGRepresentation(img, 1);
+    }else{
+        data =UIImagePNGRepresentation(img);
+    }
+    [data writeToFile:path atomically:YES];
+}
+
++(UIImage*)imageWithview:(UIView*)view  {
+    UIGraphicsBeginImageContextWithOptions(view.frame.size, NO, 0);
+    CGContextRef ctx=  UIGraphicsGetCurrentContext();
+    [view.layer renderInContext:ctx];
+    UIImage *img= UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return img;
+}
++(void)image_cutwithrect:(CGRect)rect fromimgv:(UIImageView*)imgv{
+    imgv.image =[UIImageView image_cutwithrect:rect fromview:imgv];
+}
+
++(UIImage*)image_cutwithrect:(CGRect)rect fromview:(UIView*)view{
+    UIGraphicsBeginImageContextWithOptions(view.frame.size, NO, 0);
+    UIBezierPath *path =[UIBezierPath bezierPathWithRect:rect];
+    [path addClip];
+    //裁剪之后再去渲染
+    CGContextRef ctx =UIGraphicsGetCurrentContext();
+    [view.layer renderInContext:ctx];
+    UIImage *image =UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return image;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @end

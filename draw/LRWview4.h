@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface LRWview4 : UIView
+@property (weak, nonatomic) IBOutlet UIImageView *imgv;
 
 @end

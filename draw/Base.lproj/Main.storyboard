@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -48,7 +49,24 @@
                     <view key="view" contentMode="scaleToFill" id="ma3-Eq-3V8" customClass="LRWview4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="5" translatesAutoresizingMaskIntoConstraints="NO" id="Ztj-oN-EYF">
+                                <rect key="frame" x="16" y="40" width="343" height="578"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="Ztj-oN-EYF" firstAttribute="top" secondItem="kA7-Fq-rdM" secondAttribute="bottom" constant="20" id="Y7p-vt-wxx"/>
+                            <constraint firstItem="1F8-0f-eDj" firstAttribute="top" secondItem="Ztj-oN-EYF" secondAttribute="bottom" id="ZXP-9C-8kh"/>
+                            <constraint firstItem="Ztj-oN-EYF" firstAttribute="leading" secondItem="ma3-Eq-3V8" secondAttribute="leadingMargin" id="eqT-Lj-4yR"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Ztj-oN-EYF" secondAttribute="trailing" id="uib-sv-V20"/>
+                        </constraints>
+                        <connections>
+                            <outlet property="imgv" destination="Ztj-oN-EYF" id="cmp-CW-gzy"/>
+                        </connections>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item4" id="8xU-lA-0t3"/>
                 </viewController>
@@ -180,4 +198,7 @@
             <point key="canvasLocation" x="-874" y="-406"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="5" width="1280" height="1920"/>
+    </resources>
 </document>
