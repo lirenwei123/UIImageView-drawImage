@@ -39,4 +39,4 @@
 //从view中裁剪出圆/椭圆的img，返回img；
 +(UIImage*)image_cutwithOval_rect:(CGRect)rect fromview:(UIView*)view;
 
-   @end
+@end
