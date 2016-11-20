@@ -19,6 +19,8 @@
 		FB450EE01DDF8DF100EB23D2 /* LRWview5.m in Sources */ = {isa = PBXBuildFile; fileRef = FB450EDF1DDF8DF100EB23D2 /* LRWview5.m */; };
 		FB450EE31DDF8DF900EB23D2 /* LRWview6.m in Sources */ = {isa = PBXBuildFile; fileRef = FB450EE21DDF8DF900EB23D2 /* LRWview6.m */; };
 		FB450EE61DDFA5A400EB23D2 /* UIImageView+drawImage.m in Sources */ = {isa = PBXBuildFile; fileRef = FB450EE51DDFA5A400EB23D2 /* UIImageView+drawImage.m */; };
+		FBFC41FF1DE1F6DB00759128 /* LRWview7.m in Sources */ = {isa = PBXBuildFile; fileRef = FBFC41FE1DE1F6DB00759128 /* LRWview7.m */; };
+		FBFC42021DE1F9C100759128 /* UIView+LRWview.m in Sources */ = {isa = PBXBuildFile; fileRef = FBFC42011DE1F9C100759128 /* UIView+LRWview.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +47,10 @@
 		FB450EE41DDFA5A400EB23D2 /* UIImageView+drawImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+drawImage.h"; sourceTree = "<group>"; };
 		FB450EE51DDFA5A400EB23D2 /* UIImageView+drawImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+drawImage.m"; sourceTree = "<group>"; };
 		FB450EE71DDFABDF00EB23D2 /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
+		FBFC41FD1DE1F6DB00759128 /* LRWview7.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRWview7.h; sourceTree = "<group>"; };
+		FBFC41FE1DE1F6DB00759128 /* LRWview7.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRWview7.m; sourceTree = "<group>"; };
+		FBFC42001DE1F9C100759128 /* UIView+LRWview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+LRWview.h"; sourceTree = "<group>"; };
+		FBFC42011DE1F9C100759128 /* UIView+LRWview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+LRWview.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,8 +97,12 @@
 				FB450EDF1DDF8DF100EB23D2 /* LRWview5.m */,
 				FB450EE11DDF8DF900EB23D2 /* LRWview6.h */,
 				FB450EE21DDF8DF900EB23D2 /* LRWview6.m */,
+				FBFC41FD1DE1F6DB00759128 /* LRWview7.h */,
+				FBFC41FE1DE1F6DB00759128 /* LRWview7.m */,
 				FB450EE41DDFA5A400EB23D2 /* UIImageView+drawImage.h */,
 				FB450EE51DDFA5A400EB23D2 /* UIImageView+drawImage.m */,
+				FBFC42001DE1F9C100759128 /* UIView+LRWview.h */,
+				FBFC42011DE1F9C100759128 /* UIView+LRWview.m */,
 				FB450EE71DDFABDF00EB23D2 /* Header.h */,
 				FB450EC41DDF8AEF00EB23D2 /* Main.storyboard */,
 				FB450EC71DDF8AEF00EB23D2 /* Assets.xcassets */,
@@ -190,9 +200,11 @@
 				FB450EDA1DDF8DE400EB23D2 /* LRWview3.m in Sources */,
 				FB450EC01DDF8AEF00EB23D2 /* AppDelegate.m in Sources */,
 				FB450EE31DDF8DF900EB23D2 /* LRWview6.m in Sources */,
+				FBFC41FF1DE1F6DB00759128 /* LRWview7.m in Sources */,
 				FB450ED41DDF8DD100EB23D2 /* LRWview1.m in Sources */,
 				FB450EBD1DDF8AEF00EB23D2 /* main.m in Sources */,
 				FB450EDD1DDF8DEA00EB23D2 /* LRWview4.m in Sources */,
+				FBFC42021DE1F9C100759128 /* UIView+LRWview.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,6 +363,7 @@
 				FB450ED11DDF8AEF00EB23D2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
