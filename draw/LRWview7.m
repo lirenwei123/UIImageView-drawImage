@@ -84,7 +84,6 @@
     }else{
     self.codeSetStr1=codeStr;
     }
-    [self setNeedsDisplay];
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
      NSString *path =[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES).firstObject stringByAppendingPathComponent:@"gestureCode"];
@@ -159,7 +158,7 @@
     }
     [path setLineJoinStyle:kCGLineJoinRound];
     [path setLineWidth:20];
-    [[UIColor greenColor]set];
+    [[UIColor lightGrayColor]set];
     [path stroke];
 }
 
